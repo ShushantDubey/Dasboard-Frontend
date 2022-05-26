@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.allsession__navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 9px;
+    .navbar__title{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .input{
+        border-radius: 6px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+.main__panel_wrapper {
+    width: calc(100vw - 255px);
+    padding: 50px 65px 0 65px;
+    overflow: hidden;
+    background-color: #ebebeb;
+    position: absolute;
+    left: 255px;
+    .dashboard__btn {
+        background-color: #198ed2;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        width: 10%;
+        box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.15385;
+        margin: 0;
+        outline: none;
+        padding: 8px 0.8em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        white-space: nowrap;
+    }
+    .dropdown__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        margin: 5px;
+    }
+}

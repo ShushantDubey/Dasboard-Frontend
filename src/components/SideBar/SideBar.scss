@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar__container {
+    p{
+        color: #00A3DF;
+        font-size: medium;
+    }
+    span{
+        color: #9698A3;
+        font-size: small; 
+    }
+    position: fixed;
+    background-color: #252938;
+    height: 100vh;
+    width: 255px;
+    padding: 70px 20px 20px 40px;
+    .sidebar__element {
+        padding: 5px;
+        .link__text{
+            span{
+                &:hover{
+                    color: rgb(255, 255, 255);
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+}
+  

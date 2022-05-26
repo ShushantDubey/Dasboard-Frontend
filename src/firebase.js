@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import {
-  // GoogleAuthProvider,
+  GoogleAuthProvider,
   getAuth,
+  signInWithPopup,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
@@ -20,12 +21,21 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-// const googleProvider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+
+const signInWithGoogle = async () => {
+  try {
+    const res = await signInWithPopup(auth, googleProvider);
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
     const userAuth = await signInWithEmailAndPassword(auth, email, password);
-    console.log(userAuth);
+    localStorage.setItem("token", userAuth?._tokenResponse?.idToken);
   } catch (err) {
     console.log(err.message);
   }
@@ -34,7 +44,7 @@ const logInWithEmailAndPassword = async (email, password) => {
 const registerWithEmailAndPassword = async (name, email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
-    // const user = res.user;
+    const user = res.user;
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -44,10 +54,8 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
-    alert("Password reset link sent!");
   } catch (err) {
     console.error(err);
-    alert(err.message);
   }
 };
 
@@ -57,7 +65,7 @@ const logout = () => {
 
 export {
   auth,
-  signInWithEmailAndPassword,
+  signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordReset,

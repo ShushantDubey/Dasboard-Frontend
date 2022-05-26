@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table__bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EBEBEB;
+    span {
+        color: #000;
+    }
+}

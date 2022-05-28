@@ -16,9 +16,15 @@
         height: 75%;
         border-radius: 9px;
         padding: 12px 0 0 6px;
+        position: relative;
         span {
             color: rgb(255, 255, 255);
             font-size: 36px;
+        }
+        img{
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 }

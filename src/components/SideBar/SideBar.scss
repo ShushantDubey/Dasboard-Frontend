@@ -12,16 +12,24 @@
     span{
         color: #9698A3;
         font-size: small; 
+        .fa-solid{
+            color: #00A3DF;
+        }
     }
     position: fixed;
     background-color: #252938;
     height: 100vh;
     width: 255px;
-    padding: 70px 20px 20px 40px;
+    padding: 70px 20px 20px 20px;
     .sidebar__element {
         padding: 5px;
+        margin-bottom: 20px;
         .link__text{
             span{
+                i{
+                    margin: 0 7px 0 0;
+                    width: 15px;
+                }
                 &:hover{
                     color: rgb(255, 255, 255);
                     transition: all 0.2s ease;
@@ -30,4 +38,6 @@
         }
     }
 }
+
+
   

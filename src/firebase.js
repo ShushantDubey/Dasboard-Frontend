@@ -34,8 +34,16 @@ const signInWithGoogle = async () => {
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
-    const userAuth = await signInWithEmailAndPassword(auth, email, password);
-    localStorage.setItem("token", userAuth?._tokenResponse?.idToken);
+     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      const user = userCredential.user;
+       localStorage.setItem("token", user.accessToken);
+       console.log(user.accessToken);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+   
   } catch (err) {
     console.log(err.message);
   }

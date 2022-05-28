@@ -10,12 +10,11 @@ function ModuleBar() {
           <p>Active Modules</p>
         </div>
         <div className="info__module__wrapper col-lg-10">
-          <InfoModuleBar moduleName="Confined Spaces" level="7"/>
-          <InfoModuleBar moduleName="Fire Training" level="4"/>
-          <InfoModuleBar moduleName="Cpr Training" level="6" />
+          <InfoModuleBar moduleName="Confined Spaces" level="7" circularBar="7"/>
+          <InfoModuleBar moduleName="Fire Training" level="3" circularBar="3"/>
+          <InfoModuleBar moduleName="Cpr Training" level="4" circularBar="4"/>
         </div>
-        <div className="col-lg-1 text-end">
-          <p>arrow</p>
+        <div className="btn col-lg-1 text-end">
         </div>
       </div>
   );

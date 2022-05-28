@@ -13,7 +13,7 @@ const InfoModuleBar = (props) => {
         </div>
 
         <div className="info__images">
-        <Circularbar/>
+        <Circularbar circularBar={props.circularBar} />
         </div>
 
       </div>

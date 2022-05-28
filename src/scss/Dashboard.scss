@@ -46,6 +46,14 @@ html,body{
     .dropdown__wrapper {
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         margin: 5px;
+        .separator{
+            width: 1px;
+            height: 15px;
+            border-radius: 10px;
+            background-color: black;
+            margin: 0 10px;
+        }
     }
 }

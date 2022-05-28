@@ -2,12 +2,11 @@ import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-function Circularbar() {
-    const value = 6;
+function Circularbar(props) {
   return (
     <CircularProgressbar
-      value={value}
-      text={`${value}`}
+      value={props.circularBar}
+      text={`${props.circularBar}%`}
       maxValue={10}
       styles={buildStyles({
         // Rotation of path and trail, in number of turns (0-1)
@@ -26,7 +25,7 @@ function Circularbar() {
         // pathTransition: 'none',
 
         // Colors
-        pathColor: `rgba(62, 152, 199, ${value/ 10})`,
+        pathColor: `rgba(62, 152, 199, ${props.circularBar/ 10})`,
         textColor: "#014998",
         trailColor: "#d6d6d6",
         backgroundColor: "#CCD2D9",

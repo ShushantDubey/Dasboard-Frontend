@@ -6,6 +6,7 @@ function DataCard (props) {
         <div className="data__card">
             <div className="number__data">
             <span>{props.data}</span>
+            <img src={props.source} alt="watch" />
             </div>
             <p>{props.label}</p>
         </div>
